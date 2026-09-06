@@ -5,7 +5,11 @@ st.set_page_config(
     page_icon="🧭",
     layout="centered"
 )
+import os
+from groq import Groq
 
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=GROQ_API_KEY)
 st.title("🧭 AI Learning Roadmap Generator")
 st.write("Create a simple learning roadmap based on your goals.")
 
