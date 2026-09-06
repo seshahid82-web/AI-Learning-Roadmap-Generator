@@ -12,7 +12,8 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 st.title("🧭 AI Learning Roadmap Generator")
 st.write("Create a simple learning roadmap based on your goals.")
-
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+client = Groq(api_key=GROQ_API_KEY)
 domain = st.text_input(
     "Domain/field",
     placeholder="Example: Python, Networking, Data Science"
